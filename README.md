@@ -29,7 +29,7 @@ To ensure seamless data management and real-time updates, we have uploaded the m
 ## JavaScript Framework Used and Major pulgins and Packages
 
 Used React for Frontend and Express for making RestApi
-Used Tailwind, antd for custom css
+Used Tailwind, antd for css
 
 ## Page load Time
 
