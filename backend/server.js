@@ -1,10 +1,15 @@
 const express = require('express');
 const data = require('./modelData');
+const dotenv = require('dotenv');
 const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
-
+dotenv.config();
+const PORT = process.env.PORT || 5000;
+app.get('/', function (req, res) {
+  res.send('server running');
+});
 app.get('/explore', function (req, res) {
   res.json(data);
 });
@@ -178,6 +183,6 @@ app.post('/UploadModel', function (req, res) {
   data.push(req.body);
   res.status(200).json({ success: true, message: 'Model uploaded' });
 });
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('listening on port 3000');
 });
