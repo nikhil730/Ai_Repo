@@ -11,11 +11,13 @@ export function ModelPage() {
   const navigate = useNavigate();
   console.log(modelId);
   useEffect(() => {
-    fetch(`http://localhost:3000/Models/${modelId}`).then(async function (res) {
-      const response = await res.json();
-      setModel(response);
-      console.log(response);
-    });
+    fetch(`https://ai-repo-backend.onrender.com/Models/${modelId}`).then(
+      async function (res) {
+        const response = await res.json();
+        setModel(response);
+        console.log(response);
+      }
+    );
   }, []);
 
   function onClickHandler({ name }) {

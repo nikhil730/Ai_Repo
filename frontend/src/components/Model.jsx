@@ -19,14 +19,17 @@ export function Model(props) {
     const item = {
       id: Id,
     };
-    const response = await fetch(`http://localhost:3000/explore/dislike/`, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(item),
-    });
+    const response = await fetch(
+      `https://ai-repo-backend.onrender.com/explore/dislike/`,
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(item),
+      }
+    );
     const result = await response.json();
     if (result.success) {
       message.success("disliked");
@@ -41,7 +44,7 @@ export function Model(props) {
       id: Id,
     };
     const response = await fetch(
-      `http://localhost:3000/explore/dislike/accuracy`,
+      `https://ai-repo-backend.onrender.com/explore/dislike/accuracy`,
       {
         method: "POST",
         mode: "cors",
@@ -65,7 +68,7 @@ export function Model(props) {
       id: Id,
     };
     const response = await fetch(
-      `http://localhost:3000/explore/dislike/easyToUse`,
+      `https://ai-repo-backend.onrender.com/explore/dislike/easyToUse`,
       {
         method: "POST",
         mode: "cors",
@@ -90,14 +93,17 @@ export function Model(props) {
       id: Id,
     };
     console.log(item);
-    const response = await fetch("http://localhost:3000/explore/like", {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(item),
-    });
+    const response = await fetch(
+      "https://ai-repo-backend.onrender.com/explore/like",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(item),
+      }
+    );
     const result = await response.json();
     if (result.success) {
       message.success("liked");
@@ -113,7 +119,7 @@ export function Model(props) {
     };
     console.log(item);
     const response = await fetch(
-      "http://localhost:3000/explore/like/accuracy",
+      "https://ai-repo-backend.onrender.com/explore/like/accuracy",
       {
         method: "POST",
         mode: "cors",
@@ -138,7 +144,7 @@ export function Model(props) {
     };
     console.log(item);
     const response = await fetch(
-      "http://localhost:3000/explore/like/easyToUse",
+      "https://ai-repo-backend.onrender.com/explore/like/easyToUse",
       {
         method: "POST",
         mode: "cors",

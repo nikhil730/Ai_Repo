@@ -39,7 +39,7 @@ export function UploadModel() {
     }
 
     // Send a POST request to the server with the form data
-    fetch("http://localhost:3000/UploadModel", {
+    fetch("https://ai-repo-backend.onrender.com/UploadModel", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

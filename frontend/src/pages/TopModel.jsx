@@ -8,19 +8,19 @@ export function TopModel() {
   const [topEasyModel, settopEasyModel] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/topModel")
+    fetch("https://ai-repo-backend.onrender.com/topModel")
       .then(async (res) => {
         const response = await res.json();
         setTopLikedModel(response);
       })
       .catch((error) => message.error("Error fetching top models: ", error));
-    fetch("http://localhost:3000/topModel/accuracy")
+    fetch("https://ai-repo-backend.onrender.com/topModel/accuracy")
       .then(async (res) => {
         const response = await res.json();
         settopAccurateModel(response);
       })
       .catch((error) => message.error("Error fetching top models: ", error));
-    fetch("http://localhost:3000/topModel/easyToUse")
+    fetch("https://ai-repo-backend.onrender.com/topModel/easyToUse")
       .then(async (res) => {
         const response = await res.json();
         settopEasyModel(response);

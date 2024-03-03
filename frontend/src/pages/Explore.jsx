@@ -11,8 +11,10 @@ export function Explore() {
 
   useEffect(() => {
     Promise.all([
-      fetch("http://localhost:3000/explore").then((res) => res.json()),
-      fetch("http://localhost:3000/explore/tags").then((res) => {
+      fetch("https://ai-repo-backend.onrender.com/explore").then((res) =>
+        res.json()
+      ),
+      fetch("https://ai-repo-backend.onrender.com/explore/tags").then((res) => {
         return res.json();
       }),
     ]).then(([jsonData, tag]) => {

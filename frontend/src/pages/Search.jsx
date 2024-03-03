@@ -8,7 +8,7 @@ export function Search() {
   const [searchResults, setSearchResults] = useState([]);
   useEffect(() => {
     if (query) {
-      fetch(`http://localhost:3000/search/${query}`)
+      fetch(`https://ai-repo-backend.onrender.com/search/${query}`)
         .then(async (res) => {
           if (res.ok) {
             const response = await res.json();
