@@ -35,6 +35,7 @@ Used Tailwind, antd for css
 
 Total time to load full page before optimization- 638ms
 Total time to load full page after optimization- 414ms
+Used Gtmetrix to calculate the page load time
 
 ## Steps made to reduce load time
 
