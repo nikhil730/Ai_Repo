@@ -20,12 +20,24 @@ The AI Model Explorer platform provides users with a curated collection of AI mo
 
 - **Search Functionality**: The platform includes a search option, enabling users to easily find specific models based on keywords or categories.
 
-- **Top 30 Models**: A page is dedicated to showcasing the top 30 models based on user likes and interactions. This feature helps users discover the most popular and highly-rated models on the platform.
+- **Top 10 Models**: A page is dedicated to showcasing the top 10 models based on user likes for the Model's accuracy or Ease to Use and interactions. This feature helps users discover the most popular and highly-rated models on the platform.
 
 ## Note
 
 To ensure seamless data management and real-time updates, we have uploaded the model data directly onto the server instead of using a mock API. This approach allows us to maintain and update model information dynamically, including likes and other model details, providing users with an interactive and up-to-date experience.
 
+## JavaScript Framework Used and Major pulgins and Packages
 
+Used React for Frontend and Express for making RestApi
+Used Tailwind, antd for custom css
 
+## Page load Time
 
+Total time to load full page before optimization- 638ms
+Total time to load full page after optimization- 414ms
+
+## Steps made to reduce load time
+
+Optimized images- Reduced dimensions and resolutions of images and compressing images
+Limit the number of HTTP requests
+Remove unnecessary Javascipt code as they load first and take mojor of time

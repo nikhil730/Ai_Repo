@@ -15,30 +15,30 @@ export function Model(props) {
   const [isAccuracyLiked, setisAccuracyLiked] = useState(false);
   const [isEasyLiked, setisEasyLiked] = useState(false);
   const navigate = useNavigate();
-  async function dislikeModel(Id) {
-    const item = {
-      id: Id,
-    };
-    const response = await fetch(
-      `https://ai-repo-backend.onrender.com/explore/dislike/`,
-      {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(item),
-      }
-    );
-    const result = await response.json();
-    if (result.success) {
-      message.success("disliked");
-      setLikes(likes - 1);
-      setisLiked(false);
-    } else {
-      message.error("unable to update the server");
-    }
-  }
+  // async function dislikeModel(Id) {
+  //   const item = {
+  //     id: Id,
+  //   };
+  //   const response = await fetch(
+  //     `https://ai-repo-backend.onrender.com/explore/dislike/`,
+  //     {
+  //       method: "POST",
+  //       mode: "cors",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(item),
+  //     }
+  //   );
+  //   const result = await response.json();
+  //   if (result.success) {
+  //     message.success("disliked");
+  //     setLikes(likes - 1);
+  //     setisLiked(false);
+  //   } else {
+  //     message.error("unable to update the server");
+  //   }
+  // }
   async function dislikeModelAccuracy(Id) {
     const item = {
       id: Id,
@@ -56,7 +56,7 @@ export function Model(props) {
     );
     const result = await response.json();
     if (result.success) {
-      message.success("disliked");
+      message.success("disliked Accuracy");
       setAccuracy(Accuracy - 1);
       setisAccuracyLiked(false);
     } else {
@@ -80,7 +80,7 @@ export function Model(props) {
     );
     const result = await response.json();
     if (result.success) {
-      message.success("disliked");
+      message.success("disliked Ease to Use");
       seteasyToUse(easyToUse - 1);
       setisEasyLiked(false);
     } else {
@@ -88,31 +88,31 @@ export function Model(props) {
     }
   }
 
-  async function likeModel(Id) {
-    const item = {
-      id: Id,
-    };
-    console.log(item);
-    const response = await fetch(
-      "https://ai-repo-backend.onrender.com/explore/like",
-      {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(item),
-      }
-    );
-    const result = await response.json();
-    if (result.success) {
-      message.success("liked");
-      setLikes(likes + 1);
-      setisLiked(true);
-    } else {
-      message.error("unable to update the server");
-    }
-  }
+  // async function likeModel(Id) {
+  //   const item = {
+  //     id: Id,
+  //   };
+  //   console.log(item);
+  //   const response = await fetch(
+  //     "https://ai-repo-backend.onrender.com/explore/like",
+  //     {
+  //       method: "POST",
+  //       mode: "cors",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(item),
+  //     }
+  //   );
+  //   const result = await response.json();
+  //   if (result.success) {
+  //     message.success("liked");
+  //     setLikes(likes + 1);
+  //     setisLiked(true);
+  //   } else {
+  //     message.error("unable to update the server");
+  //   }
+  // }
   async function likeModelAccuracy(Id) {
     const item = {
       id: Id,
@@ -131,7 +131,7 @@ export function Model(props) {
     );
     const result = await response.json();
     if (result.success) {
-      message.success("liked");
+      message.success("liked Accuracy");
       setAccuracy(Accuracy + 1);
       setisAccuracyLiked(true);
     } else {
@@ -156,7 +156,7 @@ export function Model(props) {
     );
     const result = await response.json();
     if (result.success) {
-      message.success("liked");
+      message.success("liked Ease to Use");
       seteasyToUse(easyToUse + 1);
       setisEasyLiked(true);
     } else {
