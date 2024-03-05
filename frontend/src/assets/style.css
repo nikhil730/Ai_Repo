@@ -18,3 +18,17 @@
         /* margin-top: auto; */
     
 }
+.button{
+        /* background-color: red; */
+}
+.btntext{
+        color: white;
+        font-style: italic;
+        border-radius: 35% 35%;
+        font-size: small;
+        padding: 5px 7px;
+        background-color: #2f2727;
+}
+.header{
+        cursor: pointer;
+}

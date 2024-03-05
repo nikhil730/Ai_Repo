@@ -5,6 +5,7 @@ import { FilterTag } from "./FilterTag";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
+import "../assets/style.css";
 
 export function Model(props) {
   //console.log(props);
@@ -174,13 +175,14 @@ export function Model(props) {
       // onClick={() => navigate(`/Models/${props.id}`)}
       className=" flex flex-col border-2  border-zinc-300 transform translate-y-0 scale-100 translate-z-0 rounded-lg px-8 py-8"
     >
-      <div onClick={() => navigate(`/Models/${props.id}`)}>
+      <div className=" header" onClick={() => navigate(`/Models/${props.id}`)}>
         <p className="font-bold">{props.name}</p>
         <span className="font-semibold">{props.category}</span>
       </div>
       <p>{props.description}</p>
 
-      <div>
+      <div className="button mb-1">
+        <span className="btntext ">Accuracy</span>
         {isAccuracyLiked ? (
           <button
             onClick={() => {
@@ -200,8 +202,9 @@ export function Model(props) {
         )}
 
         <span>{" " + Accuracy + "   "}</span>
-        {/* </div>
-      <div> */}
+      </div>
+      <div className="button">
+        <span className="btntext ">Ease to use</span>
         {isEasyLiked ? (
           <button
             onClick={() => {
@@ -219,7 +222,6 @@ export function Model(props) {
             <CiHeart className="text-red-700 size-4" />
           </button>
         )}
-
         <span>{" " + easyToUse}</span>
       </div>
     </div>
